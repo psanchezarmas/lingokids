@@ -1,0 +1,16 @@
+table_name: activities
+json_file: /Volumes/lingokids/bronze/files/activities.json
+schema_file: /Workspace/Users/pablo.sanchez.armas@gmail.com/lingokids/resources/schemas/activities_schema.json
+columns:
+  - name: activity_id
+    type: string
+    nullable: false
+  - name: name
+    type: string
+    nullable: true
+  - name: type
+    type: string
+    nullable: true
+  - name: subtype
+    type: string
+    nullable: true
