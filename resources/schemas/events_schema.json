@@ -1,0 +1,88 @@
+{
+  "schema_name": "events_schema",
+  "version": "1.0.0",
+  "description": "Schema definition for user activity events.",
+  "type": "struct",
+  "fields": [
+    {
+      "name": "event_id",
+      "type": "string",
+      "nullable": false,
+      "metadata": { "description": "Unique identifier for the event." }
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "nullable": false,
+      "metadata": { "description": "Event name or type (e.g., activity_exit)." }
+    },
+    {
+      "name": "occurred_at",
+      "type": "timestamp",
+      "nullable": false,
+      "metadata": { "description": "Timestamp when the event occurred." }
+    },
+    {
+      "name": "user_id",
+      "type": "string",
+      "nullable": false,
+      "metadata": { "description": "User associated with this event." }
+    },
+    {
+      "name": "child_id",
+      "type": "string",
+      "nullable": true,
+      "metadata": { "description": "Child ID associated with the event." }
+    },
+    {
+      "name": "data",
+      "type": "struct",
+      "nullable": true,
+      "fields": [
+        { "name": "activity_id", "type": "string", "nullable": true },
+        { "name": "source", "type": "string", "nullable": true },
+        { "name": "duration", "type": "double", "nullable": true },
+        { "name": "completed", "type": "boolean", "nullable": true },
+        { "name": "collection_id", "type": "string", "nullable": true },
+        { "name": "loading_time", "type": "double", "nullable": true }
+      ],
+      "metadata": { "description": "Details about the specific activity event." }
+    },
+    {
+      "name": "context",
+      "type": "struct",
+      "nullable": true,
+      "fields": [
+        {
+          "name": "device",
+          "type": "struct",
+          "nullable": true,
+          "fields": [
+            { "name": "device_id", "type": "string", "nullable": true },
+            { "name": "brand", "type": "string", "nullable": true },
+            { "name": "model", "type": "string", "nullable": true }
+          ]
+        },
+        {
+          "name": "os",
+          "type": "struct",
+          "nullable": true,
+          "fields": [
+            { "name": "name", "type": "string", "nullable": true },
+            { "name": "version", "type": "string", "nullable": true }
+          ]
+        },
+        {
+          "name": "app",
+          "type": "struct",
+          "nullable": true,
+          "fields": [
+            { "name": "version", "type": "string", "nullable": true },
+            { "name": "build", "type": "string", "nullable": true }
+          ]
+        }
+      ],
+      "metadata": { "description": "Contextual metadata such as device, OS, and app version." }
+    }
+  ]
+}

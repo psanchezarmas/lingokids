@@ -1,0 +1,32 @@
+{
+  "schema_name": "activities_schema",
+  "version": "1.0.0",
+  "description": "Schema definition for activities metadata.",
+  "type": "struct",
+  "fields": [
+    {
+      "name": "activity_id",
+      "type": "string",
+      "nullable": false,
+      "metadata": { "description": "Unique identifier for the activity." }
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "nullable": true,
+      "metadata": { "description": "Display name of the activity." }
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "nullable": true,
+      "metadata": { "description": "Main category of the activity (e.g., video, traceable)." }
+    },
+    {
+      "name": "subtype",
+      "type": "string",
+      "nullable": true,
+      "metadata": { "description": "Optional subtype for finer classification (e.g., song, letter)." }
+    }
+  ]
+}
