@@ -1,4 +1,6 @@
 table_name: events
+schema_name: bronze
+catalog_name: lingokids
 json_file: /Volumes/lingokids/bronze/files/events.json
 schema_file: /Workspace/Users/pablo.sanchez.armas@gmail.com/lingokids/resources/schemas/events_schema.json
 columns:

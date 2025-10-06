@@ -1,4 +1,6 @@
 table_name: activities
+schema_name: bronze
+catalog_name: lingokids
 json_file: /Volumes/lingokids/bronze/files/activities.json
 schema_file: /Workspace/Users/pablo.sanchez.armas@gmail.com/lingokids/resources/schemas/activities_schema.json
 columns:

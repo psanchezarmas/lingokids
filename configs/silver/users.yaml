@@ -1,0 +1,15 @@
+source:
+  catalog: lingokids
+  schema: bronze
+  table: users
+
+target:
+  catalog: lingokids
+  schema: silver
+  table: users
+
+load:
+  mode: append
+  merge_key: user_id          # used to avoid duplicates
+  update_on_children_change: true
+  overwriteSchema: false
