@@ -1,0 +1,80 @@
+table_name: events
+schema_name: bronze
+catalog_name: lingokids
+json_file: /Volumes/lingokids/bronze/files/events.json
+schema_file: /Workspace/Users/pablo.sanchez.armas@gmail.com/lingokids/resources/schemas/events_schema.json
+columns:
+  - name: event_id
+    type: string
+    nullable: false
+  - name: name
+    type: string
+    nullable: false
+  - name: occurred_at
+    type: timestamp
+    nullable: false
+  - name: user_id
+    type: string
+    nullable: false
+  - name: child_id
+    type: string
+    nullable: true
+  - name: data
+    type: struct
+    nullable: true
+    fields:
+      - name: activity_id
+        type: string
+        nullable: true
+      - name: source
+        type: string
+        nullable: true
+      - name: duration
+        type: double
+        nullable: true
+      - name: completed
+        type: boolean
+        nullable: true
+      - name: collection_id
+        type: string
+        nullable: true
+      - name: loading_time
+        type: double
+        nullable: true
+  - name: context
+    type: struct
+    nullable: true
+    fields:
+      - name: device
+        type: struct
+        nullable: true
+        fields:
+          - name: device_id
+            type: string
+            nullable: true
+          - name: brand
+            type: string
+            nullable: true
+          - name: model
+            type: string
+            nullable: true
+      - name: os
+        type: struct
+        nullable: true
+        fields:
+          - name: name
+            type: string
+            nullable: true
+          - name: version
+            type: string
+            nullable: true
+      - name: app
+        type: struct
+        nullable: true
+        fields:
+          - name: version
+            type: string
+            nullable: true
+          - name: build
+            type: string
+            nullable: true

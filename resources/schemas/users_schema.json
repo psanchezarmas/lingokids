@@ -1,0 +1,32 @@
+{
+  "schema_name": "users_schema",
+  "version": "1.0.0",
+  "description": "Schema definition for user data ingestion.",
+  "type": "struct",
+  "fields": [
+    {
+      "name": "user_id",
+      "type": "string",
+      "nullable": false,
+      "metadata": { "description": "Unique identifier for the user." }
+    },
+    {
+      "name": "children_ids",
+      "type": "array<string>",
+      "nullable": true,
+      "metadata": { "description": "List of child IDs associated with this user." }
+    },
+    {
+      "name": "country_code",
+      "type": "string",
+      "nullable": true,
+      "metadata": { "description": "2-letter ISO country code." }
+    },
+    {
+      "name": "registration_at",
+      "type": "timestamp",
+      "nullable": true,
+      "metadata": { "description": "User registration timestamp." }
+    }
+  ]
+}

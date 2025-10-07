@@ -1,0 +1,14 @@
+source:
+  catalog: lingokids
+  schema: bronze
+  table: activities
+
+target:
+  catalog: lingokids
+  schema: silver
+  table: activities
+
+load:
+  mode: append
+  merge_key: activity_id          # used to avoid duplicates
+  overwriteSchema: false

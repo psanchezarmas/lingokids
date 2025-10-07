@@ -1,0 +1,19 @@
+table_name: users
+schema_name: bronze
+catalog_name: lingokids
+json_file: /Volumes/lingokids/bronze/files/users.json
+schema_file: /Workspace/Users/pablo.sanchez.armas@gmail.com/lingokids/resources/schemas/users_schema.json
+columns:
+  - name: user_id
+    type: string
+    nullable: false
+  - name: children_ids
+    type: array
+    element_type: string
+    nullable: true
+  - name: country_code
+    type: string
+    nullable: true
+  - name: registration_at
+    type: timestamp
+    nullable: true

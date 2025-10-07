@@ -1,0 +1,14 @@
+source:
+  catalog: lingokids
+  schema: bronze
+  table: events
+
+target:
+  catalog: lingokids
+  schema: silver
+  table: events
+
+load:
+  mode: append
+  merge_key: event_id          # used to avoid duplicates
+  overwriteSchema: false

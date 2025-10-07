@@ -1,0 +1,16 @@
+catalog:
+  name: "lingokids"
+  comment: "Lingokids technical assessment1234"
+  properties:
+    owner: "pablo.sanchez.armas@gmail.com"
+    environment: "development"
+    update_frequency: "never"
+    purpose: "technical_assessment"
+
+medallion_schemas:
+  bronze:
+    comment: "Raw data, ingested as-is from source systems"
+  silver:
+    comment: "Cleaned and enriched data"
+  gold:
+    comment: "Aggregated data for analytics and reporting"
