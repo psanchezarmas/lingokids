@@ -26,7 +26,6 @@ lingokids/
 │   └── schemas/
 ├── setup/
 │   └── setup.ipynb
-└── tests/
 ```
 
 ---
@@ -118,12 +117,6 @@ Run `setup/setup.ipynb` to:
 3. **Run Silver notebooks** in `notebooks/silver_ingestion/` to process and upsert data into Silver tables.
 4. **Run Gold notebook** `notebooks/gold_ingestion/dashboard_ingestion.ipynb` to generate analytics tables.
 5. **Explore and analyze** using `analytics/analytics_engineer_challenge.ipynb`.
-
----
-
-## Testing
-
-- Place test scripts and validation notebooks in the `tests/` directory.
 
 ---
 
